@@ -1,0 +1,31 @@
+---
+title: Posts
+layout: default
+---
+
+<div class="blog-title">Blog of Wanglili</div>
+{% for post in site.posts %}
+  {% capture year %}{{ post.time | date: "%Y" }}{% endcapture %}
+  {% capture month %}{{ post.time | date: "%B" }}{% endcapture %}
+  {% capture nyear %}{{ post.previous.time | date: "%Y" }}{% endcapture %}
+  {% capture nmonth %}{{ post.previous.time | date: "%B" }}{% endcapture %}
+
+  {% if forloop.first %}
+    <h4 class="year">Year {{ nyear }}</h4>
+    <ul>
+  {% endif %}
+        
+  <li><span>{{ post.time |date: "%Y-%m-%d" }}</span> &nbsp;
+    <a href="{{ post.url }}" class="archive-post">{{ post.title }}</a>
+  </li>
+
+  {% if forloop.last %}
+    </ul>
+  {% else %}
+    {% if year != nyear %}
+      </ul>
+      <h4 class="year">Year {{ nyear }}</h4>
+      <ul>
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,24 @@
+<div class="sidebar-container" id="sidebar">
+  <div class="sidebar-item">
+    <a href="{{site.url}}/" alt="回到首页" title="回到首页">
+      <img src="/img/Filehippo.png" width="130" height="130"></a>
+  </div>
+
+  <div class="nav">
+      <div class="sidebar-nav">
+        {% if page.url == site.url %}
+          <a href="{{site.url}}/" class=" active " >Home</a>
+        {%else%}
+          <a href="{{site.url}}/" >Home</a>
+        {% endif %}
+      </div>
+      <div class="sidebar-nav"><a href="{{ '/posts.html' }}" title="Archive">Posts</a></div>
+      <div class="sidebar-nav"><a href="{{ '/about.html' }}" title="About">About</a></div>
+      
+  </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,23 @@
+---
+title: Tags
+layout: default
+---
+
+<div class="blog-title">Blog of Wanglili</div>
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
+<div class="tag-list">
+	{% for tag in sortedtags %}
+	  <h3 id="{{ tag }}" class="tagname">{{ tag }}</h3>
+	  <ul>
+	  {% for post in site.tags[tag] %}
+	    <li><a href="{{ post.url }}" class="tagpost">{{ post.title }}</a></li>
+	  {% endfor %}
+	  </ul>
+	{% endfor %}
+</div>

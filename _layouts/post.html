@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="blog-title">Blog of Wanglili</div>
+      <div class="post-title">
+        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+      </div>
+
+      <div class="tagPanel">
+        {% for tag in page.tags %}
+        <a href="/tags.html#{{tag}}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="time">
+        {% assign time = page.time %}
+        {% if page.update_time %}
+            {% assign time = page.update_time %}
+        {% endif %}
+        <div class="post-time">{{ time|date: "%b %-d, %Y"}}</div>
+      </div>
+
+<article >
+	 {{ content }}
+</article>
+
+{% include comment.html %}
+
+
+
+
+
+
+

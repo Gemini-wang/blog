@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+
+<div class="blog-title">Blog of Wanglili</div>
+<div class="post-list">
+  {% for post in paginator.posts %}
+    <div class="post-style">
+      <div class="post-title">
+        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+
+      <div class="tagPanel">
+        {% for tag in post.tags %}
+          <a href="/tags.html#{{tag}}" class="tag">{{ tag }}</a>
+        {% endfor%}
+      </div>
+
+      <p class="post-excerpt">{{post.excerpt}}</p>
+      <div class="time">
+        {% assign time = post.time %}
+        {% if post.update_time %}
+            {% assign time = post.update_time %}
+        {% endif %}
+        <div class="post-time">{{ time | date: "%b %-d, %Y"}}</div>
+      </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+        <a href="/" class="pagination-item previous" ">上一页</a>
+    {% else %}
+        <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous">上一页</a>
+    {% endif %}
+  {% endif %}
+  <span class="page_number">第{{ paginator.page }}页，共{{ paginator.total_pages }}页</span>
+  {% if paginator.next_page %}
+      <a href="{{ site.url }}/page{{ paginator.next_page }}" class="next">下一页</a>
+  {% endif %}
+</div>
+
+
+
+
+

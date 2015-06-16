@@ -1,0 +1,21 @@
+name: "Blog of Lili Wang"
+description: "Web Front-End Blog by Lili Wang"
+email: liliwangxp@163.com
+
+url: "http://liliqueen.cn/blog"
+
+timezone: Asia/Beijing
+
+paginate: 8
+
+
+highlighter: pygments
+
+markdown: rdiscount
+permalink: /:year/:month/:day/:title
+github_username:  Gemini-wang
+
+comments :
+    provider : duoshuo
+    duoshuo : 
+      short_name : WLL
