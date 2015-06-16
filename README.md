@@ -4,8 +4,6 @@ Blog: http://lilyqueen.cn.
 
 Topics: Web Front-End Developing and More.
 
-博客的源码：[Gemini-wang](http://github.com/Gemini-wang/blog)
-
 该博客使用 jekyll+Markdown 搭建.
 
 使用本主题，请：
