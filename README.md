@@ -1,6 +1,6 @@
 # Blog of Wanglili
 
-Blog: http://www.lilyqueen.cn.
+Blog: http://lilyqueen.cn.
 
 Topics: Web Front-End Developing and More.
 
