@@ -323,7 +323,7 @@ pre > code {
   padding: 10px 10px;
   margin: 10px 10px 10px 0;
   color:white;
-  background-color: #3d5998;
+  background-color: #ccc;
   border-color: white;
   overflow-x: auto;
   word-wrap: normal;
@@ -333,7 +333,7 @@ pre > code {
   &:before {
     content: attr(data-lang) " code";
     display: block;
-    background-color: #3d5998;
+    background-color: #ccc;
     border-color: white;
     margin: 0 16px 16px 16px;
     padding: (16px / 2) 16px;
