@@ -322,8 +322,9 @@ pre > code {
   display: block;
   padding: 10px 10px;
   margin: 10px 10px 10px 0;
+  color:white;
   background-color: #3d5998;
-  border-color: #DEA9B5;
+  border-color: white;
   overflow-x: auto;
   word-wrap: normal;
   white-space: inherit;
@@ -333,7 +334,7 @@ pre > code {
     content: attr(data-lang) " code";
     display: block;
     background-color: #3d5998;
-    border-color: #DEA9B5;
+    border-color: white;
     margin: 0 16px 16px 16px;
     padding: (16px / 2) 16px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
