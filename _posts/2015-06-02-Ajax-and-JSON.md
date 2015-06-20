@@ -36,10 +36,10 @@ function updataSales(responseText){                                   //处理�
 	var sales=JSON.parse("responseText");							  //将JSON串转换为Javascript对象	
 	for(i=0;i<sales.length;i++){
 		var sale=sales[i];
-		var div=document.createElement("div")；
+		var div=document.createElement("div");
 		div.setAttribute("class","salesItem");
 		div.innerHTML=sale.name+"sold"+sale.sales+"gumballs";
-		salesDiv.appendChild(div);									  //将<div>插入<div id="sales">中
+		salesDiv.appendChild(div);									 //将<div>插入<div id="sales">中
 	}
 }
 
