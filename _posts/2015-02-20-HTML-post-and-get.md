@@ -88,8 +88,8 @@ GET也打包表单变量,但会把这些数据追加到URL的最后，然后向�
 	  <td>安全性较高</td>
    </tr>
    <tr>
-      <td>`<form method="get" action="a.asp?b=b">`跟`<form method="get" action="a.asp">`是一样的，即method为get时action页面后边带的参数列表会被忽视</td>
-	  <td>`<form method="get" action="a.asp?b=b">`跟`<form method="get" action="a.asp">`是不一样的</td>
+       <td>form method="get" action="a.asp?b=b"跟form method="get" action="a.asp"是一样的，即method为get时action页面后边带的参数列表会被忽视</td>
+	  <td>form method="get" action="a.asp?b=b"跟form method="get" action="a.asp"是不一样的</td>
    </tr>
    <tr>
       <td>它会将数据添加到URL中，通过这种方式传递到服务器，通常利用一个问号？代表URL地址的结尾与数据参数的开端，后面的参数每一个数据参数以“名称=值”的形式出现，参数与参数之间利用一个连接符&来区分</td>
