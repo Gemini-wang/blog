@@ -1,5 +1,5 @@
 ---
-title: 杂七杂八--JS
+title: 杂七杂八--JS（2）
 time: 2017.01.13
 layout: post
 tags:
