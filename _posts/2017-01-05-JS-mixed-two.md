@@ -1,9 +1,9 @@
 ---
-title: 杂七杂八--HTML(2)
+title: 杂七杂八--JS
 time: 2017.01.05
 layout: post
 tags:
-- HTML
+- JS
 - 笔记
 excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 ---
