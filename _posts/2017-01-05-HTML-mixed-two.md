@@ -111,7 +111,7 @@ excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 `postMessage(data,origin)`：data是要传递的数据，JavaScript的任意基本类型或可复制的对象，传的时候最好序列化一下；origin是字符串参数，指明目标窗口的源，协议+主机+端口号[+URL]，设为"*"可以传递给任意窗口，如果要指定和当前窗口同源的话设置为"/"。
 
 {% highlight js %}
-	//http://test.com/index.html：
+	//`http://test.com/index.html`：
 	<div style="width:200px; float:left; margin-right:200px;border:solid 1px #333;">
 	    <div id="color">Frame Color</div>
 	</div>
@@ -123,7 +123,7 @@ excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 	     window.frames[0].postMessage('getcolor','http://lslib.com');
 	}
 
-	//http://lslib.com/lslib.html：
+	//`http://lslib.com/lslib.html`：
 	window.addEventListener('message',function(e){
 	     if(e.source!=window.parent) return;
 	     console.log(e.data);
@@ -131,6 +131,7 @@ excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 	     window.parent.postMessage(color,'*');
 	},false);
 {% endhighlight %}
+
 
 #####跨域资源共享（CORS）
 服务器端对于CORS的支持，主要就是通过设置`Access-Control-Allow-Origin`来进行的。如果浏览器检测到相应的设置，就可以允许Ajax进行跨域的访问。
