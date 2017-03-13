@@ -5,7 +5,7 @@ layout: post
 tags:
 - JS
 - 笔记
-excerpt: 本文主要记录了JS高程里关于对象和函数的部分。
+excerpt: 本文主要记录了es6的入门知识。
 ---
 
 {% highlight js %}
