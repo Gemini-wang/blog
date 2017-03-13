@@ -5,7 +5,7 @@ layout: post
 tags:
 - HTML
 - 笔记
-excerpt: 本文主要记录了清浮动的方法和原理。
+excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 ---
 
 ##浏览器解析
