@@ -68,8 +68,7 @@ excerpt: 本文主要记录了几种离线存储cookie/sessionStorage/localStora
     localStorage.getItem(key)            // 通过键值读取对应的值
     localStorage.removeItem(key)         // 通过键值移除对应的值
     localStorage.clear()                 // 初始化localStorage，清除所有键值对
-    localStorage.key(index)              // 通过下标index来获取指定索引的key名
-    
+    localStorage.key(index)              // 通过下标index来获取指定索引的key名  
     sessionStorage.setItem('key', 'value');     // 从sessionStorage获取数据
     var data = sessionStorage.getItem('key');   // 从sessionStorage删除保存的数据
     sessionStorage.removeItem('key');           // 从sessionStorage删除所有保存的数据
