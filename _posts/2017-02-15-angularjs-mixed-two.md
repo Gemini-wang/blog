@@ -401,11 +401,9 @@ promise 的方法:
 	<script type="text/ng-template" id="zippy.html">
 		<div>test</div>
 	</script>
-	或者
 	app.run(function($templateCache){
 		$templateCache.put('zippy.html','<div>test</div>');
-	});
-	
+	});	
 	app.directive('myDirective',function($templateCache){
 		return{
 			template: $templateCache.get('zippy.html')
