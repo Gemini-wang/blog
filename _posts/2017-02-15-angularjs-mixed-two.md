@@ -142,8 +142,9 @@ Providers是唯一一种你可以传进 `.config()` 函数的 service。当你�
 	     }
 	});
 	{{ name }}
-	<button ng-click="changeFoo()">Change the name</button> //ng-click会调用$apply
-	又比如，用$timeout来代替setTimeout()，因为前者会帮你调用$apply()。
+	<button ng-click="changeFoo()">Change the name</button> 
+	//ng-click会调用$apply
+	//又比如，用$timeout来代替setTimeout()，因为前者会帮你调用$apply()。
 {% endhighlight %}
 
 $apply()和$digest()的区别：
