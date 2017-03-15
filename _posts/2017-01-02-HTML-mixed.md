@@ -28,9 +28,6 @@ excerpt: 本文主要记录了几种离线存储cookie/sessionStorage/localStora
 
 {% highlight js %}
     document.cookie="name=value;domain=.google.com";      //所有google.com下的主机都可以访问该cookie
-{% endhighlight %} 
-
-{% highlight js %}
     //设置cookie
     function setCookie(name,value,expiresHours){ 
         var cookieString=name+"="+escape(value); 
@@ -73,7 +70,6 @@ excerpt: 本文主要记录了几种离线存储cookie/sessionStorage/localStora
     localStorage.clear()                 // 初始化localStorage，清除所有键值对
     localStorage.key(index)              // 通过下标index来获取指定索引的key名
     
-    // 保存数据到sessionStorage
     sessionStorage.setItem('key', 'value');     // 从sessionStorage获取数据
     var data = sessionStorage.getItem('key');   // 从sessionStorage删除保存的数据
     sessionStorage.removeItem('key');           // 从sessionStorage删除所有保存的数据
