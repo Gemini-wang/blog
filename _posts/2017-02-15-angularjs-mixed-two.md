@@ -141,7 +141,6 @@ Providers是唯一一种你可以传进 `.config()` 函数的 service。当你�
 	         $scope.name = "Bar";
 	     }
 	});
-	{{ name }}
 	<button ng-click="changeFoo()">Change the name</button> //ng-click会调用$apply
 {% endhighlight %}
 
