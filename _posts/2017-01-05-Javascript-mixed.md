@@ -118,11 +118,9 @@ excerpt: 本文主要记录了浏览器解析过程，跨域的方法。
 	<div>
 	     <iframe id="child" src="http://lsLib.com/lsLib.html"></iframe>
 	</div>
-
 	window.onload=function(){
 	     window.frames[0].postMessage('getcolor','http://lslib.com');
 	}
-
 	//`http://lslib.com/lslib.html`：
 	window.addEventListener('message',function(e){
 	     if(e.source!=window.parent) return;
