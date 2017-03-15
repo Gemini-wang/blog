@@ -142,18 +142,14 @@ Providers是唯一一种你可以传进 `.config()` 函数的 service。当你�
 	     }
 	});
 	{{ name }}
-	<button ng-click="changeFoo()">Change the name</button> 
-	//ng-click会调用$apply
-	//又比如，用$timeout来代替setTimeout()，因为前者会帮你调用$apply()。
+	<button ng-click="changeFoo()">Change the name</button> //ng-click会调用$apply
 {% endhighlight %}
 
 $apply()和$digest()的区别：
-
 * 最直接的差异是， `$apply`可以带参数，它可以接受一个函数，然后在应用数据之后，调用这个函数。所以，一般在集成非 Angular 框架（比如jQuery）的代码时，可以把代码写在这个里面调用。
 * 当调用`$digest`的时候，只触发当前作用域和它的子作用域上的监控，但是当调用`$apply`的时候，会触发作用域树上的所有监控。
 
 什么时候手动调用`$apply()`方法？
-
 * 使用了JavaScript中的`setTimeout()`来更新一个scope model
 {% highlight js %}
 	$scope.getMessage = function() {  
