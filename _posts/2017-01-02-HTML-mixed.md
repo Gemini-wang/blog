@@ -12,13 +12,10 @@ excerpt: 本文主要记录了几种离线存储cookie/sessionStorage/localStora
 #####每次都会携带在HTTP头中，如果使用`cookie`保存过多数据会带来性能问题.
 
 #####设置`cookie`，过期时间
-{% highlight js %}
-    document.cookie="userId=828; userName=hulk; expiress="+date.toGMTString();
-{% endhighlight %}    
+document.cookie="userId=828; userName=hulk; expiress="+date.toGMTString();
+   
 #####获得`cookie`
-{% highlight js %}
-    var test = document.cookie;
-{% endhighlight %}
+var test = document.cookie;
 
 #####指定可访问`cookie`的路径
 * 默认情况下，如果在某个页面创建了一个`cookie`，那么该页面所在目录中的其他页面也可以访问该`cookie`。如果这个目录下还有子目录，则在子目录中也可以访问。例如在`www.xxxx.com/html/a.html`中所创建的`cookie`，可以被`www.xxxx.com/html/b.html`或 `www.xxx.com/html/some/c.html`所访问，但不能被`www.xxxx.com/d.html`访问。 
