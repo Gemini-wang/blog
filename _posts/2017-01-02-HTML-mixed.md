@@ -11,11 +11,9 @@ excerpt: 本文主要记录了几种离线存储cookie/sessionStorage/localStora
 ##cookie
 #####每次都会携带在HTTP头中，如果使用`cookie`保存过多数据会带来性能问题.
 
-#####设置`cookie`，过期时间
-document.cookie="userId=828; userName=hulk; expiress="+date.toGMTString();
+#####设置`cookie`，过期时间`document.cookie="userId=828; userName=hulk; expiress="+date.toGMTString();`
    
-#####获得`cookie`
-var test = document.cookie;
+#####获得`cookie`：`var test = document.cookie;`
 
 #####指定可访问`cookie`的路径
 * 默认情况下，如果在某个页面创建了一个`cookie`，那么该页面所在目录中的其他页面也可以访问该`cookie`。如果这个目录下还有子目录，则在子目录中也可以访问。例如在`www.xxxx.com/html/a.html`中所创建的`cookie`，可以被`www.xxxx.com/html/b.html`或 `www.xxx.com/html/some/c.html`所访问，但不能被`www.xxxx.com/d.html`访问。 
@@ -69,19 +67,19 @@ var test = document.cookie;
 * `sessionStorage`的作用域同样是限定在文档源级别的，不仅如此，它还被限制在标签页中，不同标签页的同一个页面拥有各自的`sessionStorage`，数据不能共享。如果是一个页面里有两个`<iframe>`元素，它们是共享`sessionStorage`的。
 
 {% highlight js %}
-    localStorage.setItem(key,value)     // 设置键值对
-    localStorage.getItem(key)             // 通过键值读取对应的值
-    localStorage.removeItem(key)      // 通过键值移除对应的值
-    localStorage.clear()            // 初始化localStorage，清除所有键值对
-    localStorage.key(index)     // 通过下标index来获取指定索引的key名
+    localStorage.setItem(key,value)      // 设置键值对
+    localStorage.getItem(key)            // 通过键值读取对应的值
+    localStorage.removeItem(key)         // 通过键值移除对应的值
+    localStorage.clear()                 // 初始化localStorage，清除所有键值对
+    localStorage.key(index)              // 通过下标index来获取指定索引的key名
     
     // 保存数据到sessionStorage
-    sessionStorage.setItem('key', 'value');// 从sessionStorage获取数据var data = sessionStorage.getItem('key');// 从sessionStorage删除保存的数据
-    sessionStorage.removeItem('key');// 从sessionStorage删除所有保存的数据
+    sessionStorage.setItem('key', 'value');     // 从sessionStorage获取数据
+    var data = sessionStorage.getItem('key');   // 从sessionStorage删除保存的数据
+    sessionStorage.removeItem('key');           // 从sessionStorage删除所有保存的数据
     sessionStorage.clear();
 {% endhighlight %} 
-
-参考链接：[https://segmentfault.com/a/1190000007811307](https://segmentfault.com/a/1190000007811307)
+[https://segmentfault.com/a/1190000007811307](https://segmentfault.com/a/1190000007811307)
 
 ##session
 * `Session`保存在服务器端。为了获得更高的存取速度，服务器一般把`Session`放在内存里。每个用户都会有一个独立的`Session`。如果`Session`内容过于复杂，当大量客户访问服务器时可能会导致内存溢出。因此，`Session`里的信息应该尽量精简。
